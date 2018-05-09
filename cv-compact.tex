@@ -1,0 +1,178 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Gao Zhiyuan}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{http://github.com/alapha23/}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {Computer Science},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.8in, 10.0in},
+  left=0.8in,
+  top=0.70in
+}
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\normalsize}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+\begin{document}
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.25in}
+\begin{minipage}{0.45\linewidth}
+  Seoul National University \\
+  Computer Science and Engineering \\
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Email: & \href{mailto:2017-81842@snu.ac.kr}{\tt 2017-81842@snu.ac.kr} \\
+    Github: & \href{https://github.com/alapha23/}{\tt https://github.com/alapha23/} \\
+  \end{tabular}
+\end{minipage}
+\section*{Education}
+\begin{itemize}
+  \item B.S. Political Science, National Cheng Kung University, 2015.
+  \item B.S. Engineering Science, National Cheng Kung University, 2017.
+  \item B.S. Computer Science and Engineering, Seoul National University University, 2017.
+\end{itemize}
+\section*{Projects}
+\subsection*{\textbf{Image Blender}}
+\begin{itemize}
+	\item Implement Gaussian smoothing, upsampling, gaussian pyramid, laplacian pyramid from scratch.
+	\item Apply a mask on the blending image, merge the laplacian pyramids and return the upsampled gaussian pyramid added with laplacian pyramid
+\end{itemize}
+
+\subsection*{\textbf{Image Mosaicing}}
+\begin{itemize}
+	\item Caculate homography matrix between two images
+	\item Convert and combine the two images based on homography matrix
+\end{itemize}
+
+\subsection*{\textbf{Apply Tucker Decomposition to tiny-yolo}}
+\begin{itemize}
+	\item Boost performance of tiny-yolo on caffe in terms of decomposing one layer into several smaller layers. 
+\end{itemize}
+
+\subsection*{\textbf{SnuPL/1 Compiler}}
+\begin{itemize}
+\item SnuPL1 is a procedural language related to Oberon programming language. SnuPL/1 supports conditional expressions, IO, string, arrays, etc..
+\item Implemented in C++ the compiler will compile SnuPL/1 source code into 32-bit Intel assembly code.	\\
+\end{itemize}
+\subsection*{\textbf{Weighted Round Robin Linux Scheduler for Multicore System}}
+\begin{itemize}
+	\item A weighted round robin scheduling class with SMP support.
+	\item Load balancing is provided to balance multicores.
+\end{itemize}
+\subsection*{\textbf{Rotation based Read-write Lock for ARTIK10}}
+\begin{itemize}
+\item A read-write lock based on rotation information from device.	
+\item Synchronize with spinlock and conditional variables.	
+\item Manage waiting list with linux circular list.	\\
+\end{itemize}
+\subsection*{\textbf{SNU Source Code Plagiarism Detector}}
+\begin{itemize}
+\item Extract Abstract Syntax Tree(Ast) from gcc for C programs.	
+\item Apply Tree Edit Distance algorithm to compare distance between two Asts.	
+\item Visualize plagiarism result with Graphviz and Neo4j	\\
+\end{itemize}
+
+
+%\section*{Activities}
+%\begin{itemize}
+%\item Speaker at OpenSUSE Asia Summit 2017 with topic of Open Source Application in Malaysian Aboriginal Education 
+%\end{itemize}
+%\begin{itemize}
+%\item Proficient in English and Japanese 
+%\end{itemize}
+%\section*{Publications}
+%
+%\subsection*{Journal Articles}
+%
+%\begin{itemize}
+%\item A General Mathematical Theory of Depreciation, 1929, {\it Journal
+%    of The American Statistical Association} 20, 340--353.
+%\item Differential Equations Subject to Error, 1927, {\it Journal of The
+%    American Statistical Association}.
+%\item Applications of the Theory of Error to the Interpretation of
+%  Trends (with H. Working), 1929, {\it Journal of the American
+%    Statistical Association}.
+%\end{itemize}
+
+%\subsection*{Proceedings}
+%
+%\begin{itemize}
+%\item A generalized T-Test and measure of multivariate dispersion,
+%  Proc. Second Berkeley Symposium of Mathematical Statistics and
+%  Probability, 1951.
+%\end{itemize}
+
+%\bigskip
+
+% Footer
+%\begin{center}
+%  \begin{footnotesize}
+%    Last updated: \today \\
+%    \href{\footerlink}{\texttt{\footerlink}}
+%  \end{footnotesize}
+%\end{center}
+
+\end{document}
