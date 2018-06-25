@@ -25,7 +25,7 @@
 
 % Replace this with a link to your CV if you like, or set it empty
 % (as in \def\footerlink{}) to remove the link in the footer:
-\def\footerlink{http://github.com/alapha23/}
+%\def\footerlink{http://github.com/alapha23/}
 
 % The following metadata will show up in the PDF properties
 \hypersetup{
@@ -39,10 +39,11 @@
 }
 
 \geometry{
-  body={6.8in, 10.0in},
-  left=0.8in,
-  top=0.70in
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
 }
+
 % Customize page headers
 \pagestyle{myheadings}
 \markright{\name}
@@ -51,7 +52,7 @@
 % Custom section fonts
 \usepackage{sectsty}
 \sectionfont{\rmfamily\mdseries\Large}
-\subsectionfont{\rmfamily\mdseries\itshape\normalsize}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
 
 % Other possible font commands include:
 % \ttfamily for teletype,
@@ -62,6 +63,7 @@
 
 % Don't indent paragraphs.
 \setlength\parindent{0em}
+
 % Make lists without bullets
 \renewenvironment{itemize}{
   \begin{list}{}{
@@ -70,7 +72,9 @@
 }{
   \end{list}
 }
+
 \begin{document}
+
 % Place name at left
 {\huge \name}
 
@@ -78,57 +82,77 @@
 %\centerline{\huge \bf \name}
 
 \vspace{0.25in}
+
 \begin{minipage}{0.45\linewidth}
+%  \href{http://www.unc.edu/}{University of North Carolina} \\
   Seoul National University \\
   Computer Science and Engineering \\
+%  Smith Building \\
+%  Chapel Hill, NC 27599
 \end{minipage}
 \begin{minipage}{0.45\linewidth}
   \begin{tabular}{ll}
+%    Phone: & (919) 962-1234 \\
+%    Fax: &  (919) 962-5678 \\
     Email: & \href{mailto:2017-81842@snu.ac.kr}{\tt 2017-81842@snu.ac.kr} \\
-    Github: & \href{https://github.com/alapha23/}{\tt https://github.com/alapha23/} \\
-	  WechatID: & {alapha23}	\\
+%    Github: & \href{https://github.com/alapha23/}{\tt https://github.com/alapha23/} \\
   \end{tabular}
 \end{minipage}
+
+
+%\section*{Personal}
+%
+%\begin{itemize}
+%\item Born on September 29, 1895.
+%\item United States Citizen.
+%\end{itemize}
+\section*{Summary}
+\begin{itemize}
+	\item Exchange student in Seoul National University who seeks for an intensive Korean language enhancement for the summer vacation. Already took Korean level 1
+	\item Computer Hacker, tinker and a deep-lover for Korea
+\end{itemize}
+
 \section*{Education}
+
 \begin{itemize}
   \item B.S. Political Science, National Cheng Kung University, 2015.
+
   \item B.S. Engineering Science, National Cheng Kung University, 2017.
+
   \item B.S. Computer Science and Engineering, Seoul National University University, 2017.
 \end{itemize}
 
-\subsection*{\textbf{Skills}}
+
+\section*{Activities}
 \begin{itemize}
-	\item C/C++, Linux, java, python, matlab
-	\item English, Japanese(JLPT N1)
+	\item Volunteer in India for month and a half
+	\item Founder of PassByValue--a voluneer community focusing on help Malaysian aboriginals
+	\item Speaker at OpenSUSE Asia Summit-- an open source conference to share my experiences of computer science education
+	\item Speaker at Youth Global Participation and Humanitarianism Seminar hosted by Taiwan Ministry of Education
 \end{itemize}
-\section*{Projects}
-\subsection*{\textbf{Weighted Round Robin Linux Scheduler for Multicore System}}
+
+\section*{Language}
 \begin{itemize}
-	\item A weighted round robin scheduling class with SMP support.
-	\item Load balancing is provided to balance multicores.
+	\item Japanese Language Profiency Test(JLPT) N1 achieved in less than 2 years of learning
+	\item TOEFL ibt 94
 \end{itemize}
-\subsection*{\textbf{Rotation based Read-write Lock for ARTIK10}}
+
+\section*{Computer Science Ability}
+
+\subsection*{A Weighted Round Robin Scheudler in Multicore System}
 \begin{itemize}
-\item A read-write lock based on rotation information from device.	
-\item Synchronize with spinlock and conditional variables.	
-\item Manage waiting list with linux circular list.	\\
+	\item Tested on Samsung Artik10.
+	\item Load balance between 8 cores
 \end{itemize}
-\subsection*{\textbf{SnuPL/1 Compiler}}
-\begin{itemize}
-\item SnuPL1 is a procedural language related to Oberon programming language. SnuPL/1 supports conditional expressions, IO, string, arrays, etc..
-\item Implemented in C++ the compiler will compile SnuPL/1 source code into 32-bit Intel assembly code.	\\
-\end{itemize}
-\subsection*{\textbf{SNU Source Code Plagiarism Detector}}
-\begin{itemize}
-\item Extract Abstract Syntax Tree(Ast) from gcc for C programs.	
-\item Apply Tree Edit Distance algorithm to compare distance between two Asts.	
-\item Visualize plagiarism result with Graphviz and Neo4j	\\
-\end{itemize}
-\subsection*{\textbf{Embed tiny-yolo on Raspberry Pi for Face Detection}}
-\begin{itemize}
-\item Train tiny-yolo using WIDER face dataset	
-\item Embed Darknet on raspberry pi 3
-\end{itemize}
+%section*{Activities}
+%\begin{itemize}
+%\item Speaker at OpenSUSE Asia Summit 2017 with topic of Open Source Application in Malaysian Aboriginal Education 
+%\end{itemize}
+
+%\begin{itemize}
+%\item Proficient in English and Japanese 
+%\end{itemize}
+
 %\section*{Publications}
 %
 %\subsection*{Journal Articles}
@@ -151,7 +175,7 @@
 %  Probability, 1951.
 %\end{itemize}
 
-%\bigskip
+\bigskip
 
 % Footer
 %\begin{center}

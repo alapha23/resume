@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mdwlist}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+\geometry{headheight=2in}
+\geometry{top=2in}
+\usepackage{palatino}
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+  
+\lstdefinestyle{mystyle}{
+backgroundcolor=\color{backcolour},   
+commentstyle=\color{codegreen},
+keywordstyle=\color{magenta},
+numberstyle=\tiny\color{codegray},
+stringstyle=\color{codepurple},
+basicstyle=\footnotesize,
+breakatwhitespace=false,         
+breaklines=true,                 
+captionpos=b,                    
+keepspaces=true,                 
+numbers=left,                    
+numbersep=5pt,                  
+showspaces=false,                
+showstringspaces=false,
+showtabs=false,                  
+tabsize=2
+}
+\lstset{style=mystyle}
+%\renewcommand{\rmdefault}{palatino}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+\rhead{}
+\lhead{}
+\chead{%
+  {\vbox{%
+      \vspace{2mm}
+      \large
+      Statement of Purpose \hfill
+\\
+      Seoul National University
+      \\[4mm]
+      \textbf{GAO ZHIYUAN}
+    }
+  }
+}
+
+
+\usepackage{paralist}
+
+\usepackage{todonotes}
+\setlength{\marginparwidth}{2.15cm}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,backgrounds}
+
+\begin{document}
+\pagestyle{fancy}
+
+%!TEX root = hw1.tex
+
+%% Q1
+\section{\textbf{Question 1: }In relation to your academic interest and personal experiences, please describe your motivation for your desired course. You may include information related to your preparation for the course and related academic achievements. Please state your goals while studying at Seoul National University as well as your study plan(4000 bytes limit)}
+
+
+
+
+\section{\textbf{Question 2: }Please briefly state your academic and extracurricular activities(4000 bytes limit)}
+
+\section{\textbf{Question 3: }Please write about yourself with regard to your characteristics other than your record of academic achievement. This section is provided to illustrate the personal aspects of each applicant. The following contents may be included in this section, though this section is not limited to them; experiences which have been influential in your life, individual perspectives on current issues, or role models or figures you respect(4000 bytes limit)}
+
+\end{document}
