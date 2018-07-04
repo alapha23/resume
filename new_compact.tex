@@ -1,0 +1,130 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\voffset}{0.1in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{11in}
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+%-----------------------------------------------------------
+%\usepackage{fullpage}
+\usepackage{shading}
+%\textheight=9.0in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Gao Zhiyuan}  & Programming Portfolio\\
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+\resheading{Projects}
+\begin{itemize}
+\item	
+	\begin{itemize}{\textbf{Round Robin Scheduler for Multicore System}}
+			\resitem{}
+		\resitem{Implemented round robin algorithms in Linux kernel, replaced CFS scheduler of Linux kernl.}
+		\resitem{Implemented load balancing between eight cores and tested on Artik10 board.}
+	\end{itemize}
+
+
+\item 
+	\begin{itemize}{\textbf{SNU Source Code Plagiarism Detector}}
+		\resitem{}
+		\resitem{Wrote a tool that turns GCC parse trees into abstract syntax trees}
+		\resitem{Compare different abstract syntax trees according to Tree Edit Distance algorithm}
+		\resitem{Designed and tested an equation that draws conformance rate based on all compared scopes}
+		\resitem{Visualized conformance by Graphviz and Neo4j}
+	\end{itemize}
+		
+
+\item
+	\begin{itemize}{\textbf{Software Refactor SURFEX and UWG}}
+		\resitem{}
+		\resitem{Migrate UWG modules into SURFEX software.}			
+		\resitem{Constructed automatic test program to verify correctness of the merged software}
+		\resitem{Programmed windows powershell scripts to enable automatical installation and configuration.}
+	\end{itemize}
+
+
+
+\item
+	\begin{itemize}{\textbf{SnuPL/1 Compiler}}
+		\resitem{}
+		\resitem{Developed scanner, parser, semantics checker and code generator.}
+		\resitem{Compiled into intel x86 assembly instructions}
+		\resitem{Tested and debugged all components against SnuPL/1 code set.}
+	\end{itemize}
+
+
+
+\item
+	\begin{itemize}{\textbf{Geo-tagged Filesystem based on EXT2}}
+		\resitem{}
+		\resitem{Designed a new filesystem which grants permission only when location condition matches.}
+		\resitem{Characterized inode of EXT2 and add gps information at every file creation and modification.}
+		\resitem{Characterized e2fsprogs ext2 utilities and tested the filesystem on Samsung Artik10.}
+	\end{itemize}
+
+
+
+\item
+	\begin{itemize}{\textbf{Embed tiny-yolo on Raspberry Pi for Face Detection}}
+		\resitem{}
+		\resitem{Train tiny-yolov3 with WIDER-Face dataset on darknet.}
+		\resitem{Migrated and charactized darknet onto Raspberry Pi}
+	\end{itemize}
+
+\item
+	\begin{itemize}{\textbf{Rotation Based Read-write Lock}}
+		\resitem{}
+		\resitem{Designed a new synchronization mechanism relating to rotation information of the device.}
+		\resitem{Constructed two circular lists keeping information of waiting readers and writers.}
+		\resitem{Tested the mechanism on Samsung Artik10.}
+	\end{itemize}
+
+
+\item
+	\begin{itemize}{\textbf{Crop monitoring system with STM32 Data Collection}}
+			\resitem{}
+		\resitem{Set up RTOS web server on STM32 to broadcast collected data.}
+		\resitem{Programmed STM32 to activate and control sensors including DHT11 and yl69.}
+	\end{itemize}
+
+\end{itemize}
+
+\end{document}
