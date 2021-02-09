@@ -1,0 +1,122 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\voffset}{0.1in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{15in}%11in
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{15in}
+\setlength{\textheight}{19.5in}% distance between end of line and end of page
+\setlength{\topmargin}{-0.6in}
+\setlength{\textwidth}{7.6in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.5in}
+\setlength{\evensidemargin}{-0.24in}
+%-----------------------------------------------------------
+%\usepackage{fullpage}
+\usepackage{shading}
+%\textheight=9.0in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+\newcommand{\ressubheadingtiny}[1]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+\newcommand{\ressubheadingtinytwo}[2]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+
+
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Gao Zhiyuan}  & +86 13262224615\\
+\  &  alapha23@gmail.com
+\end{tabular*}
+\\
+
+\vspace{0.03in}
+
+\resheading{Education}
+\begin{itemize}
+\item
+	\ressubheading{National Cheng Kung University}{Taiwan}{B.S., Political Science}{Sep. 2015 - May. 2017}
+\item
+	\ressubheading{Seoul National University}{Korea}{B.S., Computer Science and Engineering}{Sep. 2019 - Mar. 2023(Expected)}
+\end{itemize}
+
+\resheading{Work Experience}
+\begin{itemize}
+\item
+	\ressubheading{PLCT Lab}{Chinese Academy of Science}{Intern}{May. 2020 - Nov. 2020}
+	\begin{itemize}
+		\resitem{Emulated 32-bit RISC-V SoCs on QEMU supporting a customised interrupt controller and registers.}
+	\end{itemize}
+
+	\ressubheading{Google Summer of Code}{Apache Software Foundation}{Intern}{Jun. 2019 - Sep. 2019}
+	\begin{itemize}
+		\resitem{Engineered Apache Nemo to process single-stage batch data with AWS Lambda Functions.}
+	\end{itemize}
+
+	\ressubheading{Software Platform Lab}{Seoul National University}{Research Intern}{Mar. 2019 - Nov. 2019}
+	\begin{itemize}
+		\resitem{Part of a team working to enable distributed dataflow system to benefit from serverless computing using AWS Lambda Functions, Java and Apache Nemo.}
+	\end{itemize}
+\item
+	\ressubheading{SUSE}{Beijing, China}{Intern}{Oct. 2018 - Jan. 2019}
+	\begin{itemize}
+		\resitem{Part of the QA team working on openSUSE and SUSE Linux Enterprise, with git and openQA}
+	\end{itemize}
+
+\end{itemize}
+
+\resheading{Publications}
+\begin{itemize}
+\item
+	\ressubheadingtiny{A third-author paper rejected by EuroSys 2020}
+	\begin{itemize}
+		\resitem{A hyrbid system for dealing with bursty input rates in stream processing applications, which dynamically creates VMs and serverless containers.}
+		\resitem{Actively participated in paper writing, research experiments and evaluation, algorithm design regarding VM scaling, and engineering the dataflow framework.}
+	\end{itemize}
+\item
+	\ressubheading{Serverless Computing: Pitfalls and Solutions}{}{Korean Computer Congress 2019}{First Author}
+\item
+	\ressubheading{Lambda Executor: extend Apache Nemo with serverless functions}{}{Korean Software Congress 2019}{First Author}
+
+\end{itemize}
+
+\resheading{Misc}
+\begin{description}
+\item[Skills:]
+C, Java, x86 Assembly, AWS Lambda Functions, Binary Exploitation, Matlab
+\item[Languages:]
+	Proficient in Chinese, English(TOEFL 100), Japanese(JLPT N1) and Korean
+\end{description}
+
+
+\end{document}
