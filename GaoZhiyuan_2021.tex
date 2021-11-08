@@ -10,26 +10,78 @@
 %-----------------------------------------------------------
 %Margin setup
 
-\setlength{\voffset}{0.1in}
-\setlength{\paperwidth}{8.5in}
-\setlength{\paperheight}{15in}%11in
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\textheight}{15in}
-\setlength{\textheight}{19.5in}% distance between end of line and end of page
-\setlength{\topmargin}{-0.6in}
-\setlength{\textwidth}{7.6in}
-\setlength{\topskip}{0in}
-\setlength{\oddsidemargin}{-0.5in}
-\setlength{\evensidemargin}{-0.24in}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+
+\def\name{Gao Zhiyuan}
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {Computer Science},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.8in, 10.0in},
+  left=0.8in,
+  top=0.70in
+}
+
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\normalsize}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{0.6em}
+    \setlength{\textwidth}{7.6in}
+    \setlength{\topmargin}{-0.6in}
+    \setlength{\textheight}{19.5in}
+  }
+}{
+  \end{list}
+}
+
+%\setlength{\voffset}{0.1in}
+%\setlength{\paperwidth}{8.5in}
+%\setlength{\paperheight}{15in}%11in
+%\setlength{\headheight}{0in}
+%\setlength{\headsep}{0in}
+%\setlength{\textheight}{15in}
+%\setlength{\textheight}{19.5in}% distance between end of line and end of page
+%\setlength{\topmargin}{-0.6in}
+%\setlength{\textwidth}{7.6in}
+%\setlength{\topskip}{0in}
+%\setlength{\oddsidemargin}{-0.5in}
+%\setlength{\evensidemargin}{-0.24in}
 %-----------------------------------------------------------
 %\usepackage{fullpage}
 \usepackage{shading}
 %\textheight=9.0in
-\pagestyle{empty}
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+
+%\pagestyle{empty}
+%\raggedbottom
+%\raggedright
+%\setlength{\tabcolsep}{0in}
 
 %-----------------------------------------------------------
 %Custom commands
@@ -55,9 +107,9 @@
 \begin{document}
 
 \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Gao Zhiyuan}  & +86 13262224615\\
+\textbf{\Large Gao Zhiyuan}  & +82 1059223511\\
 \  &  alapha23@gmail.com
-\end{tabular*}
+\end{tabular*}\vspace{-9.0pt}
 \\
 
 \vspace{0.03in}
@@ -73,16 +125,21 @@
 \resheading{Work Experience}
 \begin{itemize}
 \item
+        \ressubheading{Alibaba Cloud}{}{Summer of Code Intern}{Jun. 2021 - Sep. 2021}
+        \begin{itemize}
+                \resitem{Developed QA test cases and Git workflow automation with Typescript, Jest and github workflow.}
+        \end{itemize}
+\item
 	\ressubheading{PLCT Lab}{Chinese Academy of Science}{Intern}{May. 2020 - Nov. 2020}
 	\begin{itemize}
 		\resitem{Emulated 32-bit RISC-V SoCs on QEMU supporting a customised interrupt controller and registers.}
 	\end{itemize}
-
+\item
 	\ressubheading{Google Summer of Code}{Apache Software Foundation}{Intern}{Jun. 2019 - Sep. 2019}
 	\begin{itemize}
 		\resitem{Engineered Apache Nemo to process single-stage batch data with AWS Lambda Functions.}
 	\end{itemize}
-
+\item
 	\ressubheading{Software Platform Lab}{Seoul National University}{Research Intern}{Mar. 2019 - Nov. 2019}
 	\begin{itemize}
 		\resitem{Part of a team working to enable distributed dataflow system to benefit from serverless computing using AWS Lambda Functions, Java and Apache Nemo.}
@@ -90,7 +147,7 @@
 \item
 	\ressubheading{SUSE}{Beijing, China}{Intern}{Oct. 2018 - Jan. 2019}
 	\begin{itemize}
-		\resitem{Part of the QA team working on openSUSE and SUSE Linux Enterprise, with git and openQA}
+		\resitem{Part of the QA team working on openSUSE and SUSE Linux Enterprise, with git and openQA, writing test cases in perl.}
 	\end{itemize}
 
 \end{itemize}
@@ -113,10 +170,10 @@
 \resheading{Misc}
 \begin{description}
 \item[Skills:]
-C, Java, x86 Assembly, AWS Lambda Functions, Binary Exploitation, Matlab
+C, Java, python, x86 Assembly, AWS Lambda Functions, Binary Exploitation, Matlab
 \item[Languages:]
 	Proficient in Chinese, English(TOEFL 100), Japanese(JLPT N1) and Korean
-\item[courses:]
+\item[Courses:]
 	Compiler, Operating System, GaTech cs6265(Introduction to Computer Security)
 \end{description}
 
