@@ -1,0 +1,183 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+
+\def\name{Gao Zhiyuan}
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {Computer Science},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.8in, 10.0in},
+  left=0.8in,
+  top=0.70in
+}
+
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\normalsize}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{0.6em}
+    \setlength{\textwidth}{7.5in}
+    \setlength{\topmargin}{-0.6in}
+    \setlength{\textheight}{19.5in}
+  }
+}{
+  \end{list}
+}
+
+%\setlength{\voffset}{0.1in}
+%\setlength{\paperwidth}{8.5in}
+%\setlength{\paperheight}{15in}%11in
+%\setlength{\headheight}{0in}
+%\setlength{\headsep}{0in}
+%\setlength{\textheight}{15in}
+%\setlength{\textheight}{19.5in}% distance between end of line and end of page
+%\setlength{\topmargin}{-0.6in}
+%\setlength{\textwidth}{7.6in}
+%\setlength{\topskip}{0in}
+%\setlength{\oddsidemargin}{-0.5in}
+%\setlength{\evensidemargin}{-0.24in}
+%-----------------------------------------------------------
+%\usepackage{fullpage}
+\usepackage{shading}
+%\textheight=9.0in
+
+%\pagestyle{empty}
+%\raggedbottom
+%\raggedright
+%\setlength{\tabcolsep}{0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+\newcommand{\ressubheadingtiny}[1]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+\newcommand{\ressubheadingtinytwo}[2]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+
+
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Gao Zhiyuan}  & +82 1059223511\\
+\  &  alapha23@gmail.com
+\end{tabular*}\vspace{-9.0pt}
+\\
+
+\vspace{0.03in}
+
+\resheading{Education}
+\begin{itemize}
+\item
+	\ressubheading{National Cheng Kung University}{Taiwan}{B.S., Political Science}{Sep. 2015 - May. 2017}
+\item
+	\ressubheading{Seoul National University}{Korea}{B.S., Computer Science and Engineering}{Sep. 2019 - Jul. 2023(Expected)}
+\end{itemize}
+
+\resheading{Work Experience}
+\begin{itemize}
+\item
+	\ressubheading{MetaMUI, SovereignWallet}{}{Python SDK Intern}{Dec. 2021 - Now}
+	\begin{itemize}
+		\resitem{Implementing Python SDK for MetaMUI blockchain built with Substrate framework.}
+	\end{itemize}
+        \ressubheading{Alibaba Cloud}{}{Summer of Code Intern}{Jun. 2021 - Sep. 2021}
+        \begin{itemize}
+                \resitem{Developed devsapp/start-puppeteer, fc-info unit test and integration tests, an api to check runtime version in fc-common and Git workflow automation with Typescript, Jest and Github workflow.}
+        \end{itemize}
+\item
+	\ressubheading{PLCT Lab}{Chinese Academy of Science}{Intern}{May. 2020 - Nov. 2020}
+	\begin{itemize}
+		\resitem{Participated in the patch to QEMU upstream to emulate Nuclei RISC-V SoCs with customised interrupt controllers and registers.}
+	\end{itemize}
+\item
+	\ressubheading{Google Summer of Code}{Apache Software Foundation}{Intern}{Jun. 2019 - Sep. 2019}
+	\begin{itemize}
+		\resitem{Engineered Apache Nemo to process single-stage batch data with AWS Lambda Functions.}
+	\end{itemize}
+\item
+	\ressubheading{Software Platform Lab}{Seoul National University}{Research Intern}{Mar. 2019 - Nov. 2019}
+	\begin{itemize}
+		\resitem{Part of a team working to enable distributed dataflow system to benefit from serverless computing using AWS Lambda Functions, Java and Apache Nemo.}
+	\end{itemize}
+\item
+	\ressubheading{SUSE}{Beijing, China}{Intern}{Oct. 2018 - Jan. 2019}
+	\begin{itemize}
+			\resitem{Part of the Dev\&QA team working on openSUSE and SUSE Linux Enterprise, with git, openQA and perl.}
+	\end{itemize}
+
+\end{itemize}
+
+\resheading{Publications}
+\begin{itemize}
+\item
+	\ressubheadingtiny{Unname paper, publication pending}
+	\begin{itemize}
+		\resitem{A hyrbid system for dealing with bursty input rates in stream processing applications, which dynamically creates VMs and serverless containers.}
+		\resitem{Actively participated in paper writing, research experiments and evaluation, algorithm design regarding VM scaling, and engineering the dataflow framework.}
+	\end{itemize}
+\item
+	\ressubheading{Serverless Computing: Pitfalls and Solutions}{}{Korean Computer Congress 2019}{First Author}
+\item
+	\ressubheading{Lambda Executor: extend Apache Nemo with serverless functions}{}{Korean Software Congress 2019}{First Author}
+
+\end{itemize}
+
+%\resheading{Misc}
+\begin{description}
+\item[Skills:]
+C, Java, Python, AWS Lambda Functions, Binary Exploitation, Git, x86 Assembly
+\item[Languages:]
+Proficient in Chinese, English (TOEFL 100), Japanese (JLPT N1) and Korean
+\end{description}
+
+
+\end{document}
