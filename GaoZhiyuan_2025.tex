@@ -1,0 +1,232 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+
+\def\name{Gao Zhiyuan}
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {Computer Science},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.9in, 9.0in},
+  left=0.8in,
+  top=0.70in
+}
+
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\normalsize}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{0.6em}
+    \setlength{\textwidth}{7.5in}
+    \setlength{\topmargin}{-0.6in}
+    \setlength{\textheight}{19.5in}
+  }
+}{
+  \end{list}
+}
+
+%\setlength{\voffset}{0.1in}
+%\setlength{\paperwidth}{8.5in}
+%\setlength{\paperheight}{15in}%11in
+%\setlength{\headheight}{0in}
+%\setlength{\headsep}{0in}
+%\setlength{\textheight}{15in}
+%\setlength{\textheight}{19.5in}% distance between end of line and end of page
+%\setlength{\topmargin}{-0.6in}
+%\setlength{\textwidth}{7.6in}
+%\setlength{\topskip}{0in}
+%\setlength{\oddsidemargin}{-0.5in}
+%\setlength{\evensidemargin}{-0.24in}
+%-----------------------------------------------------------
+%\usepackage{fullpage}
+\usepackage{shading}
+%\textheight=9.0in
+
+%\pagestyle{empty}
+%\raggedbottom
+%\raggedright
+%\setlength{\tabcolsep}{0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+\newcommand{\ressubheadingtiny}[1]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+\newcommand{\ressubheadingtinytwo}[2]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+
+
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Gao Zhiyuan}  & +86 13262224615\\
+\  &  alapha23@gmail.com
+\end{tabular*}\vspace{-9.0pt}
+\\
+
+\vspace{0.03in}
+
+
+\resheading{Work Experiences}
+\begin{itemize}
+\item
+	\ressubheading{Amazon Web Services}{}{Associate Solutions Architect}{Jun. 2024 - now}
+	\begin{itemize}
+		\resitem{
+1. Global Network Infrastructure Optimization Project\\
+- Monitored and analyzed network latency between the USA and Singapore, identifying bottlenecks within individual CloudFront components causing TCP reconnections.\\
+- Developed and implemented a PoP warm-up strategy and an NGINX-based solution to ensure persistent TCP connections.\\
+- Reduced cross-region latency inconsistency from 60\% to under 10\%.\\
+		}
+		\resitem{
+2. RAG-based Chatbot for AWS Knowledge\\
+- A chatbot using Retrieval Augmented Generation, to answer technical questions specifically focused on AWS services \\
+- Evaluate the responses in terms of hallucination, self-knowledge dependence, Context Utilization and etc. \\
+- The tech stack includes AWS Lambda, RDS, Opensearch, Bedrock/Claude, Sagemaker, Rerank.\\
+		}
+		\resitem{
+3. Multimodal Content Guardrailing\\
+- Employed a model unlearning project to \"forget\" certain concepts during inference time\\
+- Moderate Content through AWS Nova, Bedrock Guardrails, and the model unlearning project \\
+		}
+		\resitem{
+4. Client Security Incident Response\\
+- Managed customer security incidents through advanced attack behavior analysis, device fingerprint profiling, and cloud attack path mapping. \\
+- Enhanced client cloud security by designing and implementing robust security architectures and strategies. \\
+		}
+	\end{itemize}
+
+	\ressubheading{Trilogy}{}{Software Engineer}{Aug. 2022 - Aug. 2023}
+	\begin{itemize}
+		\resitem{
+1. AWS Cost Optimization project\\
+- Lowered AWS Service Costsfrom ~25 million USD annually down to ~5 million USD in a team of 3. \\
+- Designed non-intrusive, sustainable plans to guarantee resource sharing, user resource awareness, automated anomaly detection and permission rules. \\
+		}
+		\resitem{
+2. Social Platform for Education\\
+A social platform that enables 4-12 grade students to memorize curricular knowledge through making posts with the help of AI and memorization techniques.\\
+The tech stack includes Next.js, Prisma/MySQL, GPT-3, Stable-Diffusion, Docker and AWS Devops.\\
+		}
+		\resitem{
+3. Data Platform based on Azure AD\\
+Construct a graph-based data platform and use it to calculate company employee interaction intensity.\\
+Extract data from MS 365 through Azure Graph API, engineer the data into graph relationships and maintain the in the graph database.\\
+		}
+		\resitem{
+4. Automate Company ERP operations on NetSuite\\
+In charge of project ideation, development and delivery and was solely responsible for communication with the clients. Tech stack involves Selenium, Chrome Plugin, Python and Javascript\\
+		}
+	\end{itemize}
+	\ressubheading{MISE}{}{Devops Engineer}{Jun. 2022 - Sep. 2022}
+	\begin{itemize}
+		\resitem{
+Addressed latency spikes in an AWS Lambda-based startup application during peak traffic hours.\\
+Diagnosed and resolved performance bottlenecks by analyzing AWS Lambda, API Gateway, and MySQL RDS.\\
+Streamlined deployment processes using Terraform Infrastructure as Code (IaC).\\
+			}
+	\end{itemize}
+\end{itemize}
+
+
+\resheading{Projects}
+\begin{itemize}
+\item
+	\ressubheading{Seoul National University}{City Energy Lab}{Research Intern}{Sep. 2023 - Now.}
+		\begin{itemize}
+		\resitem{
+RAG-based Chatbot for Urban Planning\\
+- Built a RAG chatbot with FAISS, parent-child chunking, keyword-extration for domain-specific knowledge\\
+- Designed a chatbot with NextJS, Typescript, Prisma, FAISS and OpenAI API \\
+		}
+	\end{itemize}
+	
+	\ressubheadingtiny{Seoul National University}{}{2019}
+	\begin{itemize}
+		\resitem{
+Project Name: Accomodate Input Spikes with AWS Lambda Functions\\
+			A hyrbid system of Dockers and AWS Lambda Functions, where stable workloads are running on docker and input rate spikes are offloaded to AWS Lambda Functions, \\
+			Implemented job scheduling/balancing algorithm to coordinate Lambda Functions' life cycle, data relay, and system-level dynamic scaling }
+	\end{itemize}
+\item
+	\ressubheading{Google}{Summer of Code}{Apache Foundation}{2019}
+	\begin{itemize}
+		\resitem{Engineered Apache Nemo to process single-stage batch data with AWS Lambda Functions}
+	\end{itemize}
+\item
+	\ressubheading{Chinese Academy of Science}{PLCT Lab}{QEMU Researcher}{2020}
+	\begin{itemize}
+		\resitem{One patch to QEMU upstream to emulate Nuclei RISC-V SoCs with customised interrupt controllers and registers, \\
+			Delivered an oral presentation at CRVA 2020}
+	\end{itemize}
+
+\end{itemize}
+
+\resheading{Education}
+\begin{itemize}
+\item
+	\ressubheading{National Cheng Kung University}{Taiwan}{B.S., Political Science}{Sep. 2015 - May. 2017}
+\item
+	\ressubheading{Seoul National University}{Korea}{B.S., Computer Science and Engineering}{Sep. 2019 - Aug. 2024}
+\end{itemize}
+
+\begin{description}
+\item[Skills:]
+Languages: Python, Java, Typescript, C/C++ \\
+Backend Development: NextJS, Typescript, Prisma, MySQL \\
+DevOps: AWS, Redis, K8S, Docker  \\
+Others: AI Agent / RAG development, Serverless development, QEMU, React, Selenium  \\
+\item[Languages:]
+Chinese, English (TOEFL 100), Japanese (JLPT N1) and Korean
+\end{description}
+
+%\resheading{Misc}
+\end{document}
