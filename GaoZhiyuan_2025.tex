@@ -107,7 +107,7 @@
 \begin{document}
 
 \begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Gao Zhiyuan}  & +86 13262224615\\
+\textbf{\Large Gao Zhiyuan}  & +86 13262224615 | +852 52140290\\
 \  &  alapha23@gmail.com
 \end{tabular*}\vspace{-9.0pt}
 \\
@@ -122,30 +122,27 @@
 	\begin{itemize}
 		\resitem{
 1. Global Network Infrastructure Optimization Project\\
-- Monitored and analyzed network latency between the USA and Singapore, identifying bottlenecks within individual CloudFront components causing TCP reconnections.\\
+- Poizon is a global E-Commerce platform which faces large traffic per day and latencies is a critical issue.\\
+- Monitored and analyzed network latency between the USA and Singapore, identifying bottlenecks within internal CloudFront components causing TCP reconnections.\\
 - Developed and implemented a PoP warm-up strategy and an NGINX-based solution to ensure persistent TCP connections.\\
-- Reduced cross-region latency inconsistency from 60\% to under 10\%.\\
+- Reduced cross-region latency inconsistency from 60\% to under 10\%.
 		}
 		\resitem{
 2. RAG-based Chatbot for AWS Knowledge\\
 - A chatbot using Retrieval Augmented Generation, to answer technical questions specifically focused on AWS services \\
-- Evaluate the responses in terms of hallucination, self-knowledge dependence, Context Utilization and etc. \\
-- The tech stack includes AWS Lambda, RDS, Opensearch, Bedrock/Claude, Sagemaker, Rerank.\\
+- Involving Multi-agent orchestration and MCP, rewrote agent loop with langchain and Strands SDK.\\
+- Evaluate the RAG in terms of hallucination, self-knowledge dependence, Context Utilization and etc. 
 		}
 		\resitem{
-3. Multimodal Content Guardrailing\\
-- Employed a model unlearning project to \"forget\" certain concepts during inference time\\
-- Moderate Content through AWS Nova, Bedrock Guardrails, and the model unlearning project \\
-		}
-		\resitem{
-4. Improve Yolov8 Inference Throughput with AWS Inf1 Instace 
-- Using Pytorch to convert the model weight of Yolov8 for AWS Inf1 Instance. 
-- Gained 1.85x throughput increase whilst lowering the cost down to 25%.  
+3. Improve Yolov8 Inference Throughput by 185\% \\
+- Using Pytorch to convert the model weight of Yolov8 for AWS Inf1 Instance. \\
+- Gained 1.85x throughput increase whilst lowering the cost down to 25\%.  
                 }
 		\resitem{
-5. EKS Node Group Migration
-- For a customer who uses only elastic IPs (EIPs), and wishes to migration from unmanaged node group to managed node group in production, 
-- I created a user data script and used VPC endpoints to make sure the newly started unmanaged node groups can acquire EIPs. Then I guided the customer for pod evictions to complete the migration.
+4. EKS Node Group Migration\\
+- Customer faces an urgent smooth EKS version upgrade demand to avoid extended support costs.\\
+- To migration from unmanaged node group to managed node group in production, I tackled challenges in subnet public-ip auto-assigning, bridged internet connections with VPC endpoints\\
+- Created a user data script and troubleshooted cloud-init logs to make sure the new unmanaged node groups can acquire EIPs, then pod evictions to complete the migration.\\
 		}
 	\end{itemize}
 
