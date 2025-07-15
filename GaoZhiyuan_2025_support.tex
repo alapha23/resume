@@ -1,0 +1,205 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+
+\def\name{Gao Zhiyuan}
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {Computer Science},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.9in, 9.0in},
+  left=0.8in,
+  top=0.70in
+}
+
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\normalsize}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{0.6em}
+    \setlength{\textwidth}{7.5in}
+    \setlength{\topmargin}{-0.6in}
+    \setlength{\textheight}{19.5in}
+  }
+}{
+  \end{list}
+}
+
+%\setlength{\voffset}{0.1in}
+%\setlength{\paperwidth}{8.5in}
+%\setlength{\paperheight}{15in}%11in
+%\setlength{\headheight}{0in}
+%\setlength{\headsep}{0in}
+%\setlength{\textheight}{15in}
+%\setlength{\textheight}{19.5in}% distance between end of line and end of page
+%\setlength{\topmargin}{-0.6in}
+%\setlength{\textwidth}{7.6in}
+%\setlength{\topskip}{0in}
+%\setlength{\oddsidemargin}{-0.5in}
+%\setlength{\evensidemargin}{-0.24in}
+%-----------------------------------------------------------
+%\usepackage{fullpage}
+\usepackage{shading}
+%\textheight=9.0in
+
+%\pagestyle{empty}
+%\raggedbottom
+%\raggedright
+%\setlength{\tabcolsep}{0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+\newcommand{\ressubheadingtiny}[1]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+\newcommand{\ressubheadingtinytwo}[2]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+\end{tabular*}\vspace{-8.5pt}} %this one alters line distance
+
+
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Gao Zhiyuan}  & +86 13262224615, +852 52140290\\
+\  &  alapha23@gmail.com
+\end{tabular*}\vspace{-9.0pt}
+\\
+
+\resheading{Summary}
+Infrastructure \& Cloud Support Engineer specialising in AWS availability, incident response, and performance tuning. 4+ years troubleshooting complex production issues across EC2, VPC, S3, EKS and serverless stacks for high‑traffic enterprises. Adept at reproducing hard‑to‑trace errors, performing root‑cause analysis, and automating fixes with Terraform/CloudFormation \& Python/Bash. Proven record of cutting latency 60\% $\rightarrow$ 10\% and AWS spend \$25M $\rightarrow$ \$5M while ensuring secure, compliant operations. Thrive in fast‑moving, multicultural teams and communicate technical findings clearly to engineers and business stakeholders.
+
+\resheading{Core Competencies}
+\textbf{AWS Infrastructure:} EC2, S3, VPC, IAM, CloudWatch, CloudFront, Lambda, RDS, EKS/ECS\\
+\textbf{Troubleshooting\&Ops:} Incident triage, MTTR reduction, log‑driven RCA, cost optimisation\\
+\textbf{IaC\&Automation:} Terraform, AWS CDK/CloudFormation, Ansible, CI/CD (GitHub Actions)\\
+\textbf{Scripting\&Languages:} Python, Bash, Go (basic) – build diagnostic tooling \& remediation scripts\\
+\textbf{Containers\&OS:} Docker, Kubernetes, Linux (Debian/Alpine/CentOS), Server administration\\
+\textbf{Observability:} Prometheus/Grafana, CloudWatch Logs \& Metrics, X‑Ray, ELK stack\\
+\textbf{Soft Skills:} Customer‑facing support, cross‑team collaboration, documentation\\
+
+\resheading{Work Experiences}
+\begin{itemize}
+\item
+	\ressubheading{Amazon Web Services}{}{Associate Solutions Architect}{Jun. 2024 - now}
+	\begin{itemize}
+		\resitem{
+1. Resolved cross‑region latency spikes for a global e‑commerce client by analysing CloudFront TCP reset patterns, designing\& deploying an NGINX keep‑alive solution; cut inconsistent RTT from 60\% to 10\% with zero downtime.
+                }
+		\resitem{
+2. Automated EKS unmanaged→managed node‑group migration with a Python user‑data checker, slashing manual effort 80\% and avoiding extended‑support fees.
+		}
+		\resitem{
+3. Improve Yolov8 Inference Throughput by 185\% \\
+- Using Pytorch to convert the model weight of Yolov8 for AWS Inf1 Instance. \\
+- Gained 1.85x throughput increase whilst lowering the cost down to 25\%.  
+                }
+	\end{itemize}
+
+	\ressubheading{Trilogy}{}{Software Engineer}{Aug. 2022 - Aug. 2023}
+	\begin{itemize}
+		\resitem{
+1. Led company‑wide AWS cost‑optimisation initiative: built automated right‑sizing scripts (Python+AWS SDK), introduced multi-tenancy, resource‑ownership tagging and anomaly detection → annual spend \$25 M $\rightarrow$ \$5M.
+		}
+		\resitem{
+2. Deployed Terraform modules \& Jenkins pipelines to standardise VPC \& IAM baselines across 15 accounts, shrinking mean provisioning time from 3 days to 4 hours.\\
+		}
+	\end{itemize}
+	\ressubheading{MISE}{}{Devops Engineer (Contract)}{Jan. 2022 - Sep. 2022}
+	\begin{itemize}
+		\resitem{
+Investigated and fixed Lambda cold‑start latency spikes during traffic surges; tuned memory/timeout and introduced provisioned concurrency $\rightarrow$ p95 response time ‑40\%\\
+			}
+		\resitem{
+Hardened API Gateway + WAF configuration, blocking OWASP top‑10 vectors; documented remediation steps for support runbooks.\\
+			}
+	\end{itemize}
+	\ressubheading{MetaMUI-SovereignWallet}{}{Python SDK Engineer}{Jun. 2021 - Jan. 2022}
+	\begin{itemize}
+		\resitem{
+Ported Rust blockchain SDK to Python, writing integration tests to replicate consensus edge cases; accelerated developer onboarding 3×.\\
+			}
+	\end{itemize}
+\end{itemize}
+
+
+\resheading{Projects}
+\begin{itemize}
+\item
+	\ressubheadingtiny{Seoul National University}{}{2019}
+	\begin{itemize}
+		\resitem{
+Project Name: Accomodate Input Spikes with AWS Lambda Functions\\
+			A hyrbid system of Dockers and AWS Lambda Functions, where stable workloads are running on docker and input rate spikes are offloaded to AWS Lambda Functions, \\
+			Implemented job scheduling/balancing algorithm to coordinate Lambda Functions' life cycle, data relay, and system-level dynamic scaling }
+	\end{itemize}
+\item
+	\ressubheading{Google}{Summer of Code}{Apache Foundation}{2019}
+	\begin{itemize}
+		\resitem{Engineered Apache Nemo to process single-stage batch data with AWS Lambda Functions}
+	\end{itemize}
+\end{itemize}
+
+\resheading{Education}
+\begin{itemize}
+\item
+	\ressubheading{National Cheng Kung University}{Taiwan}{Engineering Science}{Sep. 2015 - May. 2017}
+\item
+	\ressubheading{Seoul National University}{Korea}{B.S., Computer Science and Engineering}{Sep. 2019 - Aug. 2024}
+\end{itemize}
+
+\begin{description}
+\item[Tech Stack Snapshot]
+AWS • Terraform • CloudFormation / CDK • Python\&Bash • Linux \&Windows Admin • Docker/Kubernetes • GitHub Actions • Prometheus/Grafana • Ansible • Jira / Agile Scrum
+\item[Languages:]
+Chinese, English (TOEFL 100), Japanese (JLPT N1) and Korean
+\end{description}
+
+%\resheading{Misc}
+\end{document}
